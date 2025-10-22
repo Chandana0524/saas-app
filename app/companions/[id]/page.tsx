@@ -21,7 +21,7 @@ const CompanionSession = async ({ params }: CompanionSessionPageProps) => {
         redirect('/companions'); // 👈 stops the page from breaking
     }
 
-    const  { name, subject, title, topic, duration } = companion;
+    const  { name, subject, topic, duration } = companion;
 
 
 
