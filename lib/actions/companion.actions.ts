@@ -50,7 +50,10 @@ export const getCompanion = async (id: string) => {
         .eq('id', id)
         .single(); // 👈 this returns one record or throws an error if not found
 
-    if(error) throw new Error(error.message);
+    if (error) {
+        console.error("Error fetching companion:", error);
+        return null; // 👈 return null so we can check later
+    }
 
     return data || null; // 👈 safe return
 };
